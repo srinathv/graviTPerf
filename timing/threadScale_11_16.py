@@ -13,13 +13,22 @@ except:
 
 
 #needed
-#1)create dict of timers for each file {run:'knl or gpu or haswell',
-# 'thread count':numThreads,'data':tracerDict}
+#1)create dict of timers for all {run:'knl or gpu or haswell',
+# 'thread count':numThreads,'data':tracerDict,'trial count':numTrials}
 
-if __name__=="__main__":
-    myParser = gvtp.gravitTimeParser()
-    myParser.parseFile("../tests/t_4.out")
-    myParser.printRunInfo()
-    t4Filter=myParser.data.getTracerDict()['filter']
-    print np.average(t4Filter[1:])
-    print myParser.data.getNumTrials()
+
+
+myParser = gvtp.gravitTimeParser()
+myParser.parseFile("../tests/t_4.out")
+myParser.printRunInfo()
+t4Filter=myParser.data.getTracerDict()['filter']
+print np.average(t4Filter[1:])
+print myParser.data.getNumTrials()
+
+
+knlParser = gvtp.gravitTimeParser()
+knlParser.parseFile("../data/knl-dev/t_1.out")
+knlParser.printRunInfo()
+scalingDict={'run':'knl','thread count':knlParser.data.getNumThreads(),
+             'data':knlParser.data.getTracerDict(),
+             'trial count':knlParser.data.getNumTrials()}

@@ -125,7 +125,7 @@ class gravitTimeParser:
               adapterTime=np.append(adapterTime,float(line.split()[4]))
             if ("select") in line:
               selectTime=np.append(selectTime,float(line.split()[4]))
-            if ("trace") in line:
+            if ("trace : ") in line:
               traceTime=np.append(traceTime,float(line.split()[4]))
             if ("shuffle") in line:
               shuffleTime=np.append(shuffleTime,float(line.split()[4]))
@@ -150,8 +150,10 @@ if __name__=="__main__":
     myParser.parseFile("../tests/t_4.out")
     myParser.printRunInfo()
     t4Filter=myParser.data.getTracerDict()['filter']
-    print np.average(t4Filter[1:])
+    print "filter avg timing (skiping first) is ",np.average(t4Filter[1:])
     print myParser.data.getNumTrials()
+
+    print myParser.data.getTracerDict()['trace']
 
 
 
