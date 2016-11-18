@@ -12,11 +12,6 @@ except:
 
 
 
-#needed
-#1)create dict of timers for all {run:'knl or gpu or haswell',
-# 'thread count':numThreads,'data':tracerDict,'trial count':numTrials}
-
-
 
 myParser = gvtp.gravitTimeParser()
 myParser.parseFile("../tests/t_4.out")
@@ -27,8 +22,22 @@ print myParser.data.getNumTrials()
 
 
 knlParser = gvtp.gravitTimeParser()
-knlParser.parseFile("../data/knl-dev/t_1.out")
-knlParser.printRunInfo()
-scalingDict={'run':'knl','thread count':knlParser.data.getNumThreads(),
-             'data':knlParser.data.getTracerDict(),
-             'trial count':knlParser.data.getNumTrials()}
+knlThreadCount=[1,2,4,8,10,17,34,67,68]
+knlList=[]
+for i in knlThreadCount:
+  knlParser.parseFile("../data/knl-dev/t_" + str(i) + ".out")
+  knlList.append([i,knlParser.data])
+
+print "knl 1 thread filter times = ", knlList[0][1].getTracerDict()['filter']
+
+gpuParser = gvtp.gravitTimeParser()
+hasParser = gvtp.gravitTimeParser()
+x86ThreadCount = [1,2,4,5,10,15,19,20]
+
+gpuList=[]
+hasList=[]
+for i in x86ThreadCount:
+  gpuParser.parseFile("../data/mav-dev-gpu/t_" + str(i) + ".out")
+  gpuList.append([i,gpuParser.data])
+  hasParser.parseFile("../data/mav-dev/t_" + str(i) + ".out")
+  hasList.append([i,hasParser.data])

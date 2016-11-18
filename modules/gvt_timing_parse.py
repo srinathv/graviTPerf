@@ -144,6 +144,19 @@ class gravitTimeParser:
                           'gather':gatherTime})
 
 
+  def getTotalTimeArray(self,start=0):
+      totTimeArray = np.array([])
+      if self.data.tracerDictSet:
+           numTrials = self.data.getNumTrials()
+           for i in range(start,numTrials):
+             tmpTime = 0
+             for key, value in self.data.getTracerDict().iteritems():
+                 tmpTime = tmpTime + value[i]
+             totTimeArray = np.append(totTimeArray,tmpTime)
+           return totTimeArray
+      else:
+          return "No data to get total time"
+
 
 if __name__=="__main__":
     myParser = gravitTimeParser()
@@ -154,6 +167,8 @@ if __name__=="__main__":
     print myParser.data.getNumTrials()
 
     print myParser.data.getTracerDict()['trace']
+
+    print myParser.getTotalTimeArray()
 
 
 
