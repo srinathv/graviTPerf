@@ -105,6 +105,7 @@ class gravitTimeParser:
         if ("generate camera") in line:
             time = float(line.split()[3])
             genCamRay=np.append(genCamRay,[time])
+            self.data.setGenCameraRay(genCamRay)
 
     self.fid.close()
 
