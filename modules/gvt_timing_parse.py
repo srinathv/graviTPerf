@@ -10,17 +10,20 @@ import numpy as np
 #fitler,adapter,select,trace,shuffle,send,gather,frame
 #method.totaltime=fitler+adapter,select,trace,shuffle,send,gather
 #count number of trials by counting number of "generate cammera rays"
-##1 dict with 1 scheduler, keys are tracerParts, values are arrays
+##dict with 1 scheduler, keys are tracerParts, values are arrays
+#   and generate camera rays
 
 
-class ParseData:
+class parsedData:
     def __init__(self):
         self.numThreads = -1
         self.adapter = None
         self.scheduler = None
         self.numTrials = -1
-        self.data = None
-        self.dataSet = False
+        self.tracerDict = None
+        self.tracerDictSet = False
+        self.genCameraRays = None
+        self.genCameraRaysSet = False
 
     def setNumThreads(self,numThreads):
         self.numThreads = numThreads
@@ -28,16 +31,13 @@ class ParseData:
     def setAdapter(self,adapter):
         self.adapter = adapter
 
-    def setData(self):
-        self.data = {} #incomplete
-        self.dataSet = True
+    def setTracerDict(self,tracerDict):
+        self.tracerDict = tracerDict
+        self.tracerDictSet = True
 
-    def getData(self,):
-        assert (self.dataSet), "Error: Data not set"
-        return self.data
-
-    def getDataEntry(self,tracerPartKey):
-        print "not done yet"
+    def setGenCameraRay(self,genCameraRays):
+        self.genCameraRays = genCameraRays
+        self.genCameraRaysSet = True
 
     def getNumThreads(self,):
         return self.numThreads
@@ -56,7 +56,7 @@ class gravitTimeParser:
     pass
     self.filename = ""
     self.fileSet = False
-    self.data = ParseData()
+    self.data = parsedData()
 
   def parseFile(self,filename):
     self.filename = filename
@@ -79,6 +79,18 @@ class gravitTimeParser:
     else:
       self.fid = open(self.filename,'r')
 
+    #initialize time arrays
+    genCamRay = np.array([])
+    filterTime = np.array([])
+    adapterTime = np.array([])
+    selectTime = np.array([])
+    traceTime = np.array([])
+    shuffleTime = np.array([])
+    sendTime = np.array([])
+    gatherTime = np.array([])
+    frameTime = np.array([])
+
+
     for line in self.fid.readlines():
         #get number of threads
         if ("Initialized") and ("threads") in line:
@@ -89,11 +101,14 @@ class gravitTimeParser:
         if ("Using") and ("adapter") in line:
             adapter = line.split()[1]
             self.data.setAdapter(adapter)
-
-
-
+        if ("generate camera") in line:
+            time = float(line.split()[3])
+            np.append(genCamRay,[time])
+            print genCamRay
 
     self.fid.close()
+
+    print genCamRay
 
 if __name__=="__main__":
     myParser = gravitTimeParser()
