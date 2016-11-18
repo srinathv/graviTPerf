@@ -120,19 +120,19 @@ class gravitTimeParser:
             self.data.setGenCameraRayTime(genCamRay)
         if ("tracer") in line:
             if ("filter") in line:
-              filterTime=np.append(filterTime,line.split()[4])
+              filterTime=np.append(filterTime,float(line.split()[4]))
             if ("adapter") in line:
-              adapterTime=np.append(adapterTime,line.split()[4])
+              adapterTime=np.append(adapterTime,float(line.split()[4]))
             if ("select") in line:
-              selectTime=np.append(selectTime,line.split()[4])
+              selectTime=np.append(selectTime,float(line.split()[4]))
             if ("trace") in line:
-              traceTime=np.append(traceTime,line.split()[4])
+              traceTime=np.append(traceTime,float(line.split()[4]))
             if ("shuffle") in line:
-              shuffleTime=np.append(shuffleTime,line.split()[4])
+              shuffleTime=np.append(shuffleTime,float(line.split()[4]))
             if ("send") in line:
-              sendTime=np.append(sendTime,line.split()[4])
+              sendTime=np.append(sendTime,float(line.split()[4]))
             if ("gather") in line:
-              gatherTime=np.append(gatherTime,line.split()[4])
+              gatherTime=np.append(gatherTime,float(line.split()[4]))
     self.fid.close()
     self.data.setNumTrials(np.size(gatherTime))
     self.data.setTracerDict({'filter':filterTime,
@@ -149,7 +149,8 @@ if __name__=="__main__":
     myParser = gravitTimeParser()
     myParser.parseFile("../tests/t_4.out")
     myParser.printRunInfo()
-    print myParser.data.getTracerDict()['filter']
+    t4Filter=myParser.data.getTracerDict()['filter']
+    print np.average(t4Filter[1:])
     print myParser.data.getNumTrials()
 
 
