@@ -1,0 +1,27 @@
+TACC: Starting up job 26079
+TACC: Starting parallel tasks...
+Initialized GraviT with 41 threads...
+Using embree adapter 
+generate camera rays 42.7724 ms
+starting domain scheduler
+starting image scheduler
+generate camera rays 6.46639 ms
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 6272 RUNNING AT c561-001
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 6272 RUNNING AT c561-001
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+TACC: MPI job exited with code: 11
+ 
+TACC: Shutdown complete. Exiting.

@@ -1,0 +1,123 @@
+TACC: Starting up job 635167
+TACC: Setting up parallel environment for MVAPICH2+mpispawn.
+TACC: Starting parallel tasks...
+Initialized GraviT with 2 threads...
+Using optix adapter 
+generate camera rays 27.6658 ms
+starting domain scheduler
+starting image scheduler
+generate camera rays 17.2456 ms
+Initizalized cuda-optix adpater...
+domain tracer: filter : 38.9372 ms
+domain tracer: adapter : 2117.7 ms
+domain tracer: select : 0.019496 ms
+domain tracer: trace : 59.8472 ms
+domain tracer: shuffle : 28.0599 ms
+domain tracer: send : 0.154283 ms
+domain tracer: gather : 6.58553 ms
+domain tracer: frame : 2257.49 ms
+domain tracer: all timers: 2251.3 ms
+domain tracer: diff timers/frame: 6.18577 ms
+generate camera rays 17.8013 ms
+domain tracer: filter : 28.6806 ms
+domain tracer: adapter : 0.008952 ms
+domain tracer: select : 0.0146 ms
+domain tracer: trace : 59.6521 ms
+domain tracer: shuffle : 25.7557 ms
+domain tracer: send : 0.025521 ms
+domain tracer: gather : 6.63357 ms
+domain tracer: frame : 127.051 ms
+domain tracer: all timers: 120.771 ms
+domain tracer: diff timers/frame: 6.28032 ms
+generate camera rays 17.3076 ms
+domain tracer: filter : 28.7734 ms
+domain tracer: adapter : 0.008934 ms
+domain tracer: select : 0.013713 ms
+domain tracer: trace : 59.453 ms
+domain tracer: shuffle : 25.9218 ms
+domain tracer: send : 0.025663 ms
+domain tracer: gather : 6.55701 ms
+domain tracer: frame : 126.92 ms
+domain tracer: all timers: 120.754 ms
+domain tracer: diff timers/frame: 6.16656 ms
+generate camera rays 17.4817 ms
+domain tracer: filter : 28.6325 ms
+domain tracer: adapter : 0.008607 ms
+domain tracer: select : 0.013822 ms
+domain tracer: trace : 59.6938 ms
+domain tracer: shuffle : 25.9063 ms
+domain tracer: send : 0.027509 ms
+domain tracer: gather : 6.57533 ms
+domain tracer: frame : 126.996 ms
+domain tracer: all timers: 120.858 ms
+domain tracer: diff timers/frame: 6.13806 ms
+generate camera rays 17.3637 ms
+domain tracer: filter : 28.6655 ms
+domain tracer: adapter : 0.017652 ms
+domain tracer: select : 0.013188 ms
+domain tracer: trace : 59.3541 ms
+domain tracer: shuffle : 25.7102 ms
+domain tracer: send : 0.027295 ms
+domain tracer: gather : 6.54933 ms
+domain tracer: frame : 126.517 ms
+domain tracer: all timers: 120.337 ms
+domain tracer: diff timers/frame: 6.17959 ms
+generate camera rays 17.3741 ms
+domain tracer: filter : 28.6073 ms
+domain tracer: adapter : 0.008478 ms
+domain tracer: select : 0.013312 ms
+domain tracer: trace : 59.147 ms
+domain tracer: shuffle : 25.204 ms
+domain tracer: send : 0.026452 ms
+domain tracer: gather : 6.5902 ms
+domain tracer: frame : 125.764 ms
+domain tracer: all timers: 119.597 ms
+domain tracer: diff timers/frame: 6.16741 ms
+generate camera rays 17.3645 ms
+domain tracer: filter : 28.6351 ms
+domain tracer: adapter : 0.008981 ms
+domain tracer: select : 0.014604 ms
+domain tracer: trace : 59.3502 ms
+domain tracer: shuffle : 25.5598 ms
+domain tracer: send : 0.026832 ms
+domain tracer: gather : 6.58474 ms
+domain tracer: frame : 126.346 ms
+domain tracer: all timers: 120.18 ms
+domain tracer: diff timers/frame: 6.16542 ms
+generate camera rays 17.5386 ms
+domain tracer: filter : 28.593 ms
+domain tracer: adapter : 0.009817 ms
+domain tracer: select : 0.013446 ms
+domain tracer: trace : 59.351 ms
+domain tracer: shuffle : 26.0145 ms
+domain tracer: send : 0.026954 ms
+domain tracer: gather : 6.55268 ms
+domain tracer: frame : 126.698 ms
+domain tracer: all timers: 120.561 ms
+domain tracer: diff timers/frame: 6.13683 ms
+generate camera rays 17.4362 ms
+domain tracer: filter : 28.6755 ms
+domain tracer: adapter : 0.009314 ms
+domain tracer: select : 0.01406 ms
+domain tracer: trace : 60.1475 ms
+domain tracer: shuffle : 25.8187 ms
+domain tracer: send : 0.02653 ms
+domain tracer: gather : 6.54726 ms
+domain tracer: frame : 127.406 ms
+domain tracer: all timers: 121.239 ms
+domain tracer: diff timers/frame: 6.16666 ms
+generate camera rays 17.3714 ms
+domain tracer: filter : 28.6424 ms
+domain tracer: adapter : 0.009128 ms
+domain tracer: select : 0.014543 ms
+domain tracer: trace : 59.4265 ms
+domain tracer: shuffle : 25.7977 ms
+domain tracer: send : 0.027365 ms
+domain tracer: gather : 6.55205 ms
+domain tracer: frame : 126.635 ms
+domain tracer: all timers: 120.47 ms
+domain tracer: diff timers/frame: 6.1652 ms
+Image write 1900 x 1080
+
+ 
+TACC: Shutdown complete. Exiting.
