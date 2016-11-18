@@ -1,17 +1,16 @@
 
-  1 #! /usr/bin/env python
-  2
-  3 import sys
-  4 import numpy as np
+#! /usr/bin/env python
+import sys
+import numpy as np
 
 sys.path.append('../modules')
- 6 try:
- 7   import cesmperftiming as cpt
- 8 except:
- 9   print "could not files cesmTimer module"
+try:
+    import gvt_timing_parse as gvtp
+except:
+    print "could not files gvt_timing_parse module"
 
 if __name__=="__main__":
-    myParser = gravitTimeParser()
+    myParser = gvtp.gravitTimeParser()
     myParser.parseFile("../tests/t_4.out")
     myParser.printRunInfo()
     t4Filter=myParser.data.getTracerDict()['filter']
