@@ -90,11 +90,12 @@ class gravitTimeParser:
     gatherTime = np.array([])
     frameTime = np.array([])
 
+    tracerParts=['filter','adapter','select','trace','shuffle',
+                 'send','gather']
 
     for line in self.fid.readlines():
         #get number of threads
         if ("Initialized") and ("threads") in line:
-          print line
           numThreads = line.split()[3]
           self.data.setNumThreads(numThreads)
         #get adapter
@@ -103,8 +104,7 @@ class gravitTimeParser:
             self.data.setAdapter(adapter)
         if ("generate camera") in line:
             time = float(line.split()[3])
-            np.append(genCamRay,[time])
-            print genCamRay
+            genCamRay=np.append(genCamRay,[time])
 
     self.fid.close()
 

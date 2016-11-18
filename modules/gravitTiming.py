@@ -10,7 +10,7 @@ import numpy as np
 class ParseData:
   def __init__(self):
     self.numMpiProcs = -1
-    self.numOmpThreads = -1
+    self.numThreads = -1
     self.numRows = -1
     self.numCols = -1
     self.routineNames = []
@@ -21,14 +21,14 @@ class ParseData:
   def setNumMpiProcs(self,numMpiProcs):
     self.numMpiProcs = numMpiProcs
 
-  def setNumOmpThreads(self,numOmpThreads):
-    self.numOmpThreads = numOmpThreads
+  def setNumThreads(self,numThreads):
+    self.numThreads = numThreads
 
   def getNumMpiProcs(self):
     return self.numMpiProcs
 
-  def getNumOmpThreads(self):
-    return self.numOmpThreads
+  def getNumThreads(self):
+    return self.numThreads
 
   def setNumRowsCols(self,numRows,numCols):
     self.numRows = numRows
@@ -62,14 +62,14 @@ class ParseData:
     except ValueError:
       print ""
       print "Routine name ", rowKey, " not found, valid values are: ", self.routineNames[:]
-      return 
+      return
 
     try:
       colIndex = self.colHeaders.index(colKey)
     except ValueError:
       print ""
       print "Column header ", colKey, " not found, valid values are: ", self.colHeaders[:]
-      return 
+      return
 
     return self.dataTable[rowIndex, colIndex]
 
@@ -80,7 +80,7 @@ class ParseData:
     except ValueError:
       print ""
       print "Column header ", colKey, " not found, valid values are: ", self.colHeaders[:]
-      return 
+      return
 
     return self.dataTable[:, colIndex]
 
@@ -92,7 +92,7 @@ class ParseData:
     except ValueError:
       print ""
       print "Routine name ", rowKey, " not found, valid values are: ", self.routineNames[:]
-      return 
+      return
 
     return self.dataTable[rowIndex, :]
 
@@ -102,7 +102,7 @@ class ParseData:
   def getColHeaders(self,):
     return self.colHeaders
 
-class cesmTimeParser:
+class gravitTimeParser:
   def __init__(self):
     pass
     self.filename = ""
@@ -116,8 +116,8 @@ class cesmTimeParser:
 
   def printRunInfo(self,):
     assert (self.fileSet), "Error: filename not set"
-    print "The run for file", self.filename, "used", self.getNumMpiProcs() , "MPI processes and ", self.getNumOmpThreads(), "threads"
-    print "  and took", cesmTimeParser.getDataEntry("Total","wallmax"), "seconds"
+    print "The run for file", self.filename, "used", self.getNumMpiProcs() , "MPI processes and ", self.getNumThreads(), "threads"
+    print "  and took", gravitTimeParser.getDataEntry("Total","wallmax"), "seconds"
 
   def parse(self,):
     assert (self.fileSet), "Error: filename not set"
@@ -134,7 +134,7 @@ class cesmTimeParser:
     # Burn a line
     self.fid.readline()
 
-    # Read the Global statistics line 
+    # Read the Global statistics line
     globLine = self.fid.readline().split()
 
     self.setNumMpiProcs(int(globLine[4]))
@@ -164,7 +164,7 @@ class cesmTimeParser:
     self.fid.close()
 
     # Deal with the "(proc", "thrd", and ")" fields
-    #   The following is ugly, but cannot be helped 
+    #   The following is ugly, but cannot be helped
     ignoreIndices1 = []
 
     ignoreIndices1.append(colHeaders.index("(proc"))
@@ -203,11 +203,11 @@ class cesmTimeParser:
       if int(row[2]) > maxNumThreads:
         maxNumThreads = int(row[2])
 
-    numOmpThreads = maxNumThreads/self.getNumMpiProcs()
+    numThreads = maxNumThreads/self.getNumMpiProcs()
     #print subNames
     #print maxNumThreads
 
-    self.data.setNumOmpThreads(numOmpThreads)
+    self.data.setNumThreads(numThreads)
 
     numCols = len(rowData[0]) - 3
     self.data.setNumRowsCols(numRows,numCols)
@@ -238,27 +238,27 @@ class cesmTimeParser:
   def setNumMpiProcs(self,numMpiProcs):
     self.data.setNumMpiProcs(numMpiProcs)
 
-  def setNumOmpThreads(self,numOmpThreads):
-    self.data.setNumOmpThreads(numOmpThreads)
+  def setNumThreads(self,numThreads):
+    self.data.setNumThreads(numThreads)
 
   def getNumMpiProcs(self,):
     return self.data.getNumMpiProcs()
 
-  def getNumOmpThreads(self,):
-    return self.data.getNumOmpThreads()
+  def getNumThreads(self,):
+    return self.data.getNumThreads()
 
 if __name__=="__main__":
 
-  myParser = cesmTimeParser()
+  myParser = gravitTimeParser()
   #myParser.parseFile("HommeTime")
-  myParser.parseFile("../tests/ccsm_timing_stats.140211-005635.gz")
+  myParser.parseFile("../tests/")
 
-  wallMax = cesmTimeParser.getDataCol("wallmax")
-  subNames = cesmTimeParser.getRoutineNames()
+  wallMax = gravitTimeParser.getDataCol("wallmax")
+  subNames = gravitTimeParser.getRoutineNames()
 
   #myParser.printRunInfo()
 
-  for i in range(len(wallMax)): 
+  for i in range(len(wallMax)):
     print "Routine", subNames[i], "took", wallMax[i], "s"
 
-  print "Wallmax time for DRIVER_INIT=", cesmTimeParser.getDataEntry("DRIVER_INIT","wallmax")
+  print "Wallmax time for DRIVER_INIT=", gravitTimeParser.getDataEntry("DRIVER_INIT","wallmax")
