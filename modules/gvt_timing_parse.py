@@ -106,10 +106,32 @@ class gravitTimeParser:
             time = float(line.split()[3])
             genCamRay=np.append(genCamRay,[time])
             self.data.setGenCameraRay(genCamRay)
-
+            self.data.genCameraRaysSet=True
+        if ("tracer") in line:
+            if ("filter") in line:
+              filterTime=np.append(filterTime,line.split()[4])
+            if ("adapter") in line:
+              adapterTime=np.append(adapterTime,line.split()[4])
+            if ("select") in line:
+              selectTime=np.append(selectTime,line.split()[4])
+            if ("trace") in line:
+              traceTime=np.append(traceTime,line.split()[4])
+            if ("shuffle") in line:
+              shuffleTime=np.append(shuffleTime,line.split()[4])
+            if ("send") in line:
+              sendTime=np.append(sendTime,line.split()[4])
+            if ("gather") in line:
+              gatherTime=np.append(gatherTime,line.split()[4])
     self.fid.close()
+    self.data.parsedData={'filter':filterTime,
+                          'adapter':adapterTime,
+                          'select':selectTime,
+                          'trace':traceTime,
+                          'shuffle':shuffleTime,
+                          'send':sendTime,
+                          'gather':gatherTime}
 
-    print genCamRay
+    print self.data.parsedData
 
 if __name__=="__main__":
     myParser = gravitTimeParser()
