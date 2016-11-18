@@ -149,7 +149,7 @@ if __name__=="__main__":
     myParser = gravitTimeParser()
     myParser.parseFile("../tests/t_4.out")
     myParser.printRunInfo()
-    print myParser.data.getTracerDict()
+    print myParser.data.getTracerDict()['filter']
     print myParser.data.getNumTrials()
 
 
