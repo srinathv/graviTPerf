@@ -1,0 +1,1684 @@
+filter
+domain tracer: filter : 31.237 ms
+
+adapter
+domain tracer: filter : 31.237 ms
+
+select
+domain tracer: filter : 31.237 ms
+
+trace
+domain tracer: filter : 31.237 ms
+
+shuffle
+domain tracer: filter : 31.237 ms
+
+send
+domain tracer: filter : 31.237 ms
+
+gather
+domain tracer: filter : 31.237 ms
+
+filter
+domain tracer: adapter : 5835.16 ms
+
+adapter
+domain tracer: adapter : 5835.16 ms
+
+select
+domain tracer: adapter : 5835.16 ms
+
+trace
+domain tracer: adapter : 5835.16 ms
+
+shuffle
+domain tracer: adapter : 5835.16 ms
+
+send
+domain tracer: adapter : 5835.16 ms
+
+gather
+domain tracer: adapter : 5835.16 ms
+
+filter
+domain tracer: select : 0.016645 ms
+
+adapter
+domain tracer: select : 0.016645 ms
+
+select
+domain tracer: select : 0.016645 ms
+
+trace
+domain tracer: select : 0.016645 ms
+
+shuffle
+domain tracer: select : 0.016645 ms
+
+send
+domain tracer: select : 0.016645 ms
+
+gather
+domain tracer: select : 0.016645 ms
+
+filter
+domain tracer: trace : 93.669 ms
+
+adapter
+domain tracer: trace : 93.669 ms
+
+select
+domain tracer: trace : 93.669 ms
+
+trace
+domain tracer: trace : 93.669 ms
+
+shuffle
+domain tracer: trace : 93.669 ms
+
+send
+domain tracer: trace : 93.669 ms
+
+gather
+domain tracer: trace : 93.669 ms
+
+filter
+domain tracer: shuffle : 18.7643 ms
+
+adapter
+domain tracer: shuffle : 18.7643 ms
+
+select
+domain tracer: shuffle : 18.7643 ms
+
+trace
+domain tracer: shuffle : 18.7643 ms
+
+shuffle
+domain tracer: shuffle : 18.7643 ms
+
+send
+domain tracer: shuffle : 18.7643 ms
+
+gather
+domain tracer: shuffle : 18.7643 ms
+
+filter
+domain tracer: send : 0.16573 ms
+
+adapter
+domain tracer: send : 0.16573 ms
+
+select
+domain tracer: send : 0.16573 ms
+
+trace
+domain tracer: send : 0.16573 ms
+
+shuffle
+domain tracer: send : 0.16573 ms
+
+send
+domain tracer: send : 0.16573 ms
+
+gather
+domain tracer: send : 0.16573 ms
+
+filter
+domain tracer: gather : 3.43747 ms
+
+adapter
+domain tracer: gather : 3.43747 ms
+
+select
+domain tracer: gather : 3.43747 ms
+
+trace
+domain tracer: gather : 3.43747 ms
+
+shuffle
+domain tracer: gather : 3.43747 ms
+
+send
+domain tracer: gather : 3.43747 ms
+
+gather
+domain tracer: gather : 3.43747 ms
+
+filter
+domain tracer: frame : 5988.61 ms
+
+adapter
+domain tracer: frame : 5988.61 ms
+
+select
+domain tracer: frame : 5988.61 ms
+
+trace
+domain tracer: frame : 5988.61 ms
+
+shuffle
+domain tracer: frame : 5988.61 ms
+
+send
+domain tracer: frame : 5988.61 ms
+
+gather
+domain tracer: frame : 5988.61 ms
+
+filter
+domain tracer: filter : 18.1988 ms
+
+adapter
+domain tracer: filter : 18.1988 ms
+
+select
+domain tracer: filter : 18.1988 ms
+
+trace
+domain tracer: filter : 18.1988 ms
+
+shuffle
+domain tracer: filter : 18.1988 ms
+
+send
+domain tracer: filter : 18.1988 ms
+
+gather
+domain tracer: filter : 18.1988 ms
+
+filter
+domain tracer: adapter : 0.009676 ms
+
+adapter
+domain tracer: adapter : 0.009676 ms
+
+select
+domain tracer: adapter : 0.009676 ms
+
+trace
+domain tracer: adapter : 0.009676 ms
+
+shuffle
+domain tracer: adapter : 0.009676 ms
+
+send
+domain tracer: adapter : 0.009676 ms
+
+gather
+domain tracer: adapter : 0.009676 ms
+
+filter
+domain tracer: select : 0.013906 ms
+
+adapter
+domain tracer: select : 0.013906 ms
+
+select
+domain tracer: select : 0.013906 ms
+
+trace
+domain tracer: select : 0.013906 ms
+
+shuffle
+domain tracer: select : 0.013906 ms
+
+send
+domain tracer: select : 0.013906 ms
+
+gather
+domain tracer: select : 0.013906 ms
+
+filter
+domain tracer: trace : 89.1245 ms
+
+adapter
+domain tracer: trace : 89.1245 ms
+
+select
+domain tracer: trace : 89.1245 ms
+
+trace
+domain tracer: trace : 89.1245 ms
+
+shuffle
+domain tracer: trace : 89.1245 ms
+
+send
+domain tracer: trace : 89.1245 ms
+
+gather
+domain tracer: trace : 89.1245 ms
+
+filter
+domain tracer: shuffle : 11.3396 ms
+
+adapter
+domain tracer: shuffle : 11.3396 ms
+
+select
+domain tracer: shuffle : 11.3396 ms
+
+trace
+domain tracer: shuffle : 11.3396 ms
+
+shuffle
+domain tracer: shuffle : 11.3396 ms
+
+send
+domain tracer: shuffle : 11.3396 ms
+
+gather
+domain tracer: shuffle : 11.3396 ms
+
+filter
+domain tracer: send : 0.021978 ms
+
+adapter
+domain tracer: send : 0.021978 ms
+
+select
+domain tracer: send : 0.021978 ms
+
+trace
+domain tracer: send : 0.021978 ms
+
+shuffle
+domain tracer: send : 0.021978 ms
+
+send
+domain tracer: send : 0.021978 ms
+
+gather
+domain tracer: send : 0.021978 ms
+
+filter
+domain tracer: gather : 3.38629 ms
+
+adapter
+domain tracer: gather : 3.38629 ms
+
+select
+domain tracer: gather : 3.38629 ms
+
+trace
+domain tracer: gather : 3.38629 ms
+
+shuffle
+domain tracer: gather : 3.38629 ms
+
+send
+domain tracer: gather : 3.38629 ms
+
+gather
+domain tracer: gather : 3.38629 ms
+
+filter
+domain tracer: frame : 128.257 ms
+
+adapter
+domain tracer: frame : 128.257 ms
+
+select
+domain tracer: frame : 128.257 ms
+
+trace
+domain tracer: frame : 128.257 ms
+
+shuffle
+domain tracer: frame : 128.257 ms
+
+send
+domain tracer: frame : 128.257 ms
+
+gather
+domain tracer: frame : 128.257 ms
+
+filter
+domain tracer: filter : 17.4832 ms
+
+adapter
+domain tracer: filter : 17.4832 ms
+
+select
+domain tracer: filter : 17.4832 ms
+
+trace
+domain tracer: filter : 17.4832 ms
+
+shuffle
+domain tracer: filter : 17.4832 ms
+
+send
+domain tracer: filter : 17.4832 ms
+
+gather
+domain tracer: filter : 17.4832 ms
+
+filter
+domain tracer: adapter : 0.010294 ms
+
+adapter
+domain tracer: adapter : 0.010294 ms
+
+select
+domain tracer: adapter : 0.010294 ms
+
+trace
+domain tracer: adapter : 0.010294 ms
+
+shuffle
+domain tracer: adapter : 0.010294 ms
+
+send
+domain tracer: adapter : 0.010294 ms
+
+gather
+domain tracer: adapter : 0.010294 ms
+
+filter
+domain tracer: select : 0.016592 ms
+
+adapter
+domain tracer: select : 0.016592 ms
+
+select
+domain tracer: select : 0.016592 ms
+
+trace
+domain tracer: select : 0.016592 ms
+
+shuffle
+domain tracer: select : 0.016592 ms
+
+send
+domain tracer: select : 0.016592 ms
+
+gather
+domain tracer: select : 0.016592 ms
+
+filter
+domain tracer: trace : 91.6345 ms
+
+adapter
+domain tracer: trace : 91.6345 ms
+
+select
+domain tracer: trace : 91.6345 ms
+
+trace
+domain tracer: trace : 91.6345 ms
+
+shuffle
+domain tracer: trace : 91.6345 ms
+
+send
+domain tracer: trace : 91.6345 ms
+
+gather
+domain tracer: trace : 91.6345 ms
+
+filter
+domain tracer: shuffle : 11.5033 ms
+
+adapter
+domain tracer: shuffle : 11.5033 ms
+
+select
+domain tracer: shuffle : 11.5033 ms
+
+trace
+domain tracer: shuffle : 11.5033 ms
+
+shuffle
+domain tracer: shuffle : 11.5033 ms
+
+send
+domain tracer: shuffle : 11.5033 ms
+
+gather
+domain tracer: shuffle : 11.5033 ms
+
+filter
+domain tracer: send : 0.023358 ms
+
+adapter
+domain tracer: send : 0.023358 ms
+
+select
+domain tracer: send : 0.023358 ms
+
+trace
+domain tracer: send : 0.023358 ms
+
+shuffle
+domain tracer: send : 0.023358 ms
+
+send
+domain tracer: send : 0.023358 ms
+
+gather
+domain tracer: send : 0.023358 ms
+
+filter
+domain tracer: gather : 3.44557 ms
+
+adapter
+domain tracer: gather : 3.44557 ms
+
+select
+domain tracer: gather : 3.44557 ms
+
+trace
+domain tracer: gather : 3.44557 ms
+
+shuffle
+domain tracer: gather : 3.44557 ms
+
+send
+domain tracer: gather : 3.44557 ms
+
+gather
+domain tracer: gather : 3.44557 ms
+
+filter
+domain tracer: frame : 130.374 ms
+
+adapter
+domain tracer: frame : 130.374 ms
+
+select
+domain tracer: frame : 130.374 ms
+
+trace
+domain tracer: frame : 130.374 ms
+
+shuffle
+domain tracer: frame : 130.374 ms
+
+send
+domain tracer: frame : 130.374 ms
+
+gather
+domain tracer: frame : 130.374 ms
+
+filter
+domain tracer: filter : 16.1164 ms
+
+adapter
+domain tracer: filter : 16.1164 ms
+
+select
+domain tracer: filter : 16.1164 ms
+
+trace
+domain tracer: filter : 16.1164 ms
+
+shuffle
+domain tracer: filter : 16.1164 ms
+
+send
+domain tracer: filter : 16.1164 ms
+
+gather
+domain tracer: filter : 16.1164 ms
+
+filter
+domain tracer: adapter : 0.009748 ms
+
+adapter
+domain tracer: adapter : 0.009748 ms
+
+select
+domain tracer: adapter : 0.009748 ms
+
+trace
+domain tracer: adapter : 0.009748 ms
+
+shuffle
+domain tracer: adapter : 0.009748 ms
+
+send
+domain tracer: adapter : 0.009748 ms
+
+gather
+domain tracer: adapter : 0.009748 ms
+
+filter
+domain tracer: select : 0.014286 ms
+
+adapter
+domain tracer: select : 0.014286 ms
+
+select
+domain tracer: select : 0.014286 ms
+
+trace
+domain tracer: select : 0.014286 ms
+
+shuffle
+domain tracer: select : 0.014286 ms
+
+send
+domain tracer: select : 0.014286 ms
+
+gather
+domain tracer: select : 0.014286 ms
+
+filter
+domain tracer: trace : 97.892 ms
+
+adapter
+domain tracer: trace : 97.892 ms
+
+select
+domain tracer: trace : 97.892 ms
+
+trace
+domain tracer: trace : 97.892 ms
+
+shuffle
+domain tracer: trace : 97.892 ms
+
+send
+domain tracer: trace : 97.892 ms
+
+gather
+domain tracer: trace : 97.892 ms
+
+filter
+domain tracer: shuffle : 11.5996 ms
+
+adapter
+domain tracer: shuffle : 11.5996 ms
+
+select
+domain tracer: shuffle : 11.5996 ms
+
+trace
+domain tracer: shuffle : 11.5996 ms
+
+shuffle
+domain tracer: shuffle : 11.5996 ms
+
+send
+domain tracer: shuffle : 11.5996 ms
+
+gather
+domain tracer: shuffle : 11.5996 ms
+
+filter
+domain tracer: send : 0.024416 ms
+
+adapter
+domain tracer: send : 0.024416 ms
+
+select
+domain tracer: send : 0.024416 ms
+
+trace
+domain tracer: send : 0.024416 ms
+
+shuffle
+domain tracer: send : 0.024416 ms
+
+send
+domain tracer: send : 0.024416 ms
+
+gather
+domain tracer: send : 0.024416 ms
+
+filter
+domain tracer: gather : 3.37138 ms
+
+adapter
+domain tracer: gather : 3.37138 ms
+
+select
+domain tracer: gather : 3.37138 ms
+
+trace
+domain tracer: gather : 3.37138 ms
+
+shuffle
+domain tracer: gather : 3.37138 ms
+
+send
+domain tracer: gather : 3.37138 ms
+
+gather
+domain tracer: gather : 3.37138 ms
+
+filter
+domain tracer: frame : 135.223 ms
+
+adapter
+domain tracer: frame : 135.223 ms
+
+select
+domain tracer: frame : 135.223 ms
+
+trace
+domain tracer: frame : 135.223 ms
+
+shuffle
+domain tracer: frame : 135.223 ms
+
+send
+domain tracer: frame : 135.223 ms
+
+gather
+domain tracer: frame : 135.223 ms
+
+filter
+domain tracer: filter : 17.0499 ms
+
+adapter
+domain tracer: filter : 17.0499 ms
+
+select
+domain tracer: filter : 17.0499 ms
+
+trace
+domain tracer: filter : 17.0499 ms
+
+shuffle
+domain tracer: filter : 17.0499 ms
+
+send
+domain tracer: filter : 17.0499 ms
+
+gather
+domain tracer: filter : 17.0499 ms
+
+filter
+domain tracer: adapter : 0.010081 ms
+
+adapter
+domain tracer: adapter : 0.010081 ms
+
+select
+domain tracer: adapter : 0.010081 ms
+
+trace
+domain tracer: adapter : 0.010081 ms
+
+shuffle
+domain tracer: adapter : 0.010081 ms
+
+send
+domain tracer: adapter : 0.010081 ms
+
+gather
+domain tracer: adapter : 0.010081 ms
+
+filter
+domain tracer: select : 0.014166 ms
+
+adapter
+domain tracer: select : 0.014166 ms
+
+select
+domain tracer: select : 0.014166 ms
+
+trace
+domain tracer: select : 0.014166 ms
+
+shuffle
+domain tracer: select : 0.014166 ms
+
+send
+domain tracer: select : 0.014166 ms
+
+gather
+domain tracer: select : 0.014166 ms
+
+filter
+domain tracer: trace : 96.3952 ms
+
+adapter
+domain tracer: trace : 96.3952 ms
+
+select
+domain tracer: trace : 96.3952 ms
+
+trace
+domain tracer: trace : 96.3952 ms
+
+shuffle
+domain tracer: trace : 96.3952 ms
+
+send
+domain tracer: trace : 96.3952 ms
+
+gather
+domain tracer: trace : 96.3952 ms
+
+filter
+domain tracer: shuffle : 11.8958 ms
+
+adapter
+domain tracer: shuffle : 11.8958 ms
+
+select
+domain tracer: shuffle : 11.8958 ms
+
+trace
+domain tracer: shuffle : 11.8958 ms
+
+shuffle
+domain tracer: shuffle : 11.8958 ms
+
+send
+domain tracer: shuffle : 11.8958 ms
+
+gather
+domain tracer: shuffle : 11.8958 ms
+
+filter
+domain tracer: send : 0.023622 ms
+
+adapter
+domain tracer: send : 0.023622 ms
+
+select
+domain tracer: send : 0.023622 ms
+
+trace
+domain tracer: send : 0.023622 ms
+
+shuffle
+domain tracer: send : 0.023622 ms
+
+send
+domain tracer: send : 0.023622 ms
+
+gather
+domain tracer: send : 0.023622 ms
+
+filter
+domain tracer: gather : 3.39493 ms
+
+adapter
+domain tracer: gather : 3.39493 ms
+
+select
+domain tracer: gather : 3.39493 ms
+
+trace
+domain tracer: gather : 3.39493 ms
+
+shuffle
+domain tracer: gather : 3.39493 ms
+
+send
+domain tracer: gather : 3.39493 ms
+
+gather
+domain tracer: gather : 3.39493 ms
+
+filter
+domain tracer: frame : 135.122 ms
+
+adapter
+domain tracer: frame : 135.122 ms
+
+select
+domain tracer: frame : 135.122 ms
+
+trace
+domain tracer: frame : 135.122 ms
+
+shuffle
+domain tracer: frame : 135.122 ms
+
+send
+domain tracer: frame : 135.122 ms
+
+gather
+domain tracer: frame : 135.122 ms
+
+filter
+domain tracer: filter : 16.2934 ms
+
+adapter
+domain tracer: filter : 16.2934 ms
+
+select
+domain tracer: filter : 16.2934 ms
+
+trace
+domain tracer: filter : 16.2934 ms
+
+shuffle
+domain tracer: filter : 16.2934 ms
+
+send
+domain tracer: filter : 16.2934 ms
+
+gather
+domain tracer: filter : 16.2934 ms
+
+filter
+domain tracer: adapter : 0.010869 ms
+
+adapter
+domain tracer: adapter : 0.010869 ms
+
+select
+domain tracer: adapter : 0.010869 ms
+
+trace
+domain tracer: adapter : 0.010869 ms
+
+shuffle
+domain tracer: adapter : 0.010869 ms
+
+send
+domain tracer: adapter : 0.010869 ms
+
+gather
+domain tracer: adapter : 0.010869 ms
+
+filter
+domain tracer: select : 0.015452 ms
+
+adapter
+domain tracer: select : 0.015452 ms
+
+select
+domain tracer: select : 0.015452 ms
+
+trace
+domain tracer: select : 0.015452 ms
+
+shuffle
+domain tracer: select : 0.015452 ms
+
+send
+domain tracer: select : 0.015452 ms
+
+gather
+domain tracer: select : 0.015452 ms
+
+filter
+domain tracer: trace : 96.5256 ms
+
+adapter
+domain tracer: trace : 96.5256 ms
+
+select
+domain tracer: trace : 96.5256 ms
+
+trace
+domain tracer: trace : 96.5256 ms
+
+shuffle
+domain tracer: trace : 96.5256 ms
+
+send
+domain tracer: trace : 96.5256 ms
+
+gather
+domain tracer: trace : 96.5256 ms
+
+filter
+domain tracer: shuffle : 11.5217 ms
+
+adapter
+domain tracer: shuffle : 11.5217 ms
+
+select
+domain tracer: shuffle : 11.5217 ms
+
+trace
+domain tracer: shuffle : 11.5217 ms
+
+shuffle
+domain tracer: shuffle : 11.5217 ms
+
+send
+domain tracer: shuffle : 11.5217 ms
+
+gather
+domain tracer: shuffle : 11.5217 ms
+
+filter
+domain tracer: send : 0.034057 ms
+
+adapter
+domain tracer: send : 0.034057 ms
+
+select
+domain tracer: send : 0.034057 ms
+
+trace
+domain tracer: send : 0.034057 ms
+
+shuffle
+domain tracer: send : 0.034057 ms
+
+send
+domain tracer: send : 0.034057 ms
+
+gather
+domain tracer: send : 0.034057 ms
+
+filter
+domain tracer: gather : 3.4061 ms
+
+adapter
+domain tracer: gather : 3.4061 ms
+
+select
+domain tracer: gather : 3.4061 ms
+
+trace
+domain tracer: gather : 3.4061 ms
+
+shuffle
+domain tracer: gather : 3.4061 ms
+
+send
+domain tracer: gather : 3.4061 ms
+
+gather
+domain tracer: gather : 3.4061 ms
+
+filter
+domain tracer: frame : 134.095 ms
+
+adapter
+domain tracer: frame : 134.095 ms
+
+select
+domain tracer: frame : 134.095 ms
+
+trace
+domain tracer: frame : 134.095 ms
+
+shuffle
+domain tracer: frame : 134.095 ms
+
+send
+domain tracer: frame : 134.095 ms
+
+gather
+domain tracer: frame : 134.095 ms
+
+filter
+domain tracer: filter : 17.6383 ms
+
+adapter
+domain tracer: filter : 17.6383 ms
+
+select
+domain tracer: filter : 17.6383 ms
+
+trace
+domain tracer: filter : 17.6383 ms
+
+shuffle
+domain tracer: filter : 17.6383 ms
+
+send
+domain tracer: filter : 17.6383 ms
+
+gather
+domain tracer: filter : 17.6383 ms
+
+filter
+domain tracer: adapter : 0.009528 ms
+
+adapter
+domain tracer: adapter : 0.009528 ms
+
+select
+domain tracer: adapter : 0.009528 ms
+
+trace
+domain tracer: adapter : 0.009528 ms
+
+shuffle
+domain tracer: adapter : 0.009528 ms
+
+send
+domain tracer: adapter : 0.009528 ms
+
+gather
+domain tracer: adapter : 0.009528 ms
+
+filter
+domain tracer: select : 0.013639 ms
+
+adapter
+domain tracer: select : 0.013639 ms
+
+select
+domain tracer: select : 0.013639 ms
+
+trace
+domain tracer: select : 0.013639 ms
+
+shuffle
+domain tracer: select : 0.013639 ms
+
+send
+domain tracer: select : 0.013639 ms
+
+gather
+domain tracer: select : 0.013639 ms
+
+filter
+domain tracer: trace : 92.1569 ms
+
+adapter
+domain tracer: trace : 92.1569 ms
+
+select
+domain tracer: trace : 92.1569 ms
+
+trace
+domain tracer: trace : 92.1569 ms
+
+shuffle
+domain tracer: trace : 92.1569 ms
+
+send
+domain tracer: trace : 92.1569 ms
+
+gather
+domain tracer: trace : 92.1569 ms
+
+filter
+domain tracer: shuffle : 12.0863 ms
+
+adapter
+domain tracer: shuffle : 12.0863 ms
+
+select
+domain tracer: shuffle : 12.0863 ms
+
+trace
+domain tracer: shuffle : 12.0863 ms
+
+shuffle
+domain tracer: shuffle : 12.0863 ms
+
+send
+domain tracer: shuffle : 12.0863 ms
+
+gather
+domain tracer: shuffle : 12.0863 ms
+
+filter
+domain tracer: send : 0.023776 ms
+
+adapter
+domain tracer: send : 0.023776 ms
+
+select
+domain tracer: send : 0.023776 ms
+
+trace
+domain tracer: send : 0.023776 ms
+
+shuffle
+domain tracer: send : 0.023776 ms
+
+send
+domain tracer: send : 0.023776 ms
+
+gather
+domain tracer: send : 0.023776 ms
+
+filter
+domain tracer: gather : 3.38336 ms
+
+adapter
+domain tracer: gather : 3.38336 ms
+
+select
+domain tracer: gather : 3.38336 ms
+
+trace
+domain tracer: gather : 3.38336 ms
+
+shuffle
+domain tracer: gather : 3.38336 ms
+
+send
+domain tracer: gather : 3.38336 ms
+
+gather
+domain tracer: gather : 3.38336 ms
+
+filter
+domain tracer: frame : 131.561 ms
+
+adapter
+domain tracer: frame : 131.561 ms
+
+select
+domain tracer: frame : 131.561 ms
+
+trace
+domain tracer: frame : 131.561 ms
+
+shuffle
+domain tracer: frame : 131.561 ms
+
+send
+domain tracer: frame : 131.561 ms
+
+gather
+domain tracer: frame : 131.561 ms
+
+filter
+domain tracer: filter : 17.311 ms
+
+adapter
+domain tracer: filter : 17.311 ms
+
+select
+domain tracer: filter : 17.311 ms
+
+trace
+domain tracer: filter : 17.311 ms
+
+shuffle
+domain tracer: filter : 17.311 ms
+
+send
+domain tracer: filter : 17.311 ms
+
+gather
+domain tracer: filter : 17.311 ms
+
+filter
+domain tracer: adapter : 0.009581 ms
+
+adapter
+domain tracer: adapter : 0.009581 ms
+
+select
+domain tracer: adapter : 0.009581 ms
+
+trace
+domain tracer: adapter : 0.009581 ms
+
+shuffle
+domain tracer: adapter : 0.009581 ms
+
+send
+domain tracer: adapter : 0.009581 ms
+
+gather
+domain tracer: adapter : 0.009581 ms
+
+filter
+domain tracer: select : 0.023798 ms
+
+adapter
+domain tracer: select : 0.023798 ms
+
+select
+domain tracer: select : 0.023798 ms
+
+trace
+domain tracer: select : 0.023798 ms
+
+shuffle
+domain tracer: select : 0.023798 ms
+
+send
+domain tracer: select : 0.023798 ms
+
+gather
+domain tracer: select : 0.023798 ms
+
+filter
+domain tracer: trace : 93.4067 ms
+
+adapter
+domain tracer: trace : 93.4067 ms
+
+select
+domain tracer: trace : 93.4067 ms
+
+trace
+domain tracer: trace : 93.4067 ms
+
+shuffle
+domain tracer: trace : 93.4067 ms
+
+send
+domain tracer: trace : 93.4067 ms
+
+gather
+domain tracer: trace : 93.4067 ms
+
+filter
+domain tracer: shuffle : 11.9219 ms
+
+adapter
+domain tracer: shuffle : 11.9219 ms
+
+select
+domain tracer: shuffle : 11.9219 ms
+
+trace
+domain tracer: shuffle : 11.9219 ms
+
+shuffle
+domain tracer: shuffle : 11.9219 ms
+
+send
+domain tracer: shuffle : 11.9219 ms
+
+gather
+domain tracer: shuffle : 11.9219 ms
+
+filter
+domain tracer: send : 0.023654 ms
+
+adapter
+domain tracer: send : 0.023654 ms
+
+select
+domain tracer: send : 0.023654 ms
+
+trace
+domain tracer: send : 0.023654 ms
+
+shuffle
+domain tracer: send : 0.023654 ms
+
+send
+domain tracer: send : 0.023654 ms
+
+gather
+domain tracer: send : 0.023654 ms
+
+filter
+domain tracer: gather : 3.42511 ms
+
+adapter
+domain tracer: gather : 3.42511 ms
+
+select
+domain tracer: gather : 3.42511 ms
+
+trace
+domain tracer: gather : 3.42511 ms
+
+shuffle
+domain tracer: gather : 3.42511 ms
+
+send
+domain tracer: gather : 3.42511 ms
+
+gather
+domain tracer: gather : 3.42511 ms
+
+filter
+domain tracer: frame : 132.4 ms
+
+adapter
+domain tracer: frame : 132.4 ms
+
+select
+domain tracer: frame : 132.4 ms
+
+trace
+domain tracer: frame : 132.4 ms
+
+shuffle
+domain tracer: frame : 132.4 ms
+
+send
+domain tracer: frame : 132.4 ms
+
+gather
+domain tracer: frame : 132.4 ms
+
+filter
+domain tracer: filter : 17.4674 ms
+
+adapter
+domain tracer: filter : 17.4674 ms
+
+select
+domain tracer: filter : 17.4674 ms
+
+trace
+domain tracer: filter : 17.4674 ms
+
+shuffle
+domain tracer: filter : 17.4674 ms
+
+send
+domain tracer: filter : 17.4674 ms
+
+gather
+domain tracer: filter : 17.4674 ms
+
+filter
+domain tracer: adapter : 0.011112 ms
+
+adapter
+domain tracer: adapter : 0.011112 ms
+
+select
+domain tracer: adapter : 0.011112 ms
+
+trace
+domain tracer: adapter : 0.011112 ms
+
+shuffle
+domain tracer: adapter : 0.011112 ms
+
+send
+domain tracer: adapter : 0.011112 ms
+
+gather
+domain tracer: adapter : 0.011112 ms
+
+filter
+domain tracer: select : 0.016613 ms
+
+adapter
+domain tracer: select : 0.016613 ms
+
+select
+domain tracer: select : 0.016613 ms
+
+trace
+domain tracer: select : 0.016613 ms
+
+shuffle
+domain tracer: select : 0.016613 ms
+
+send
+domain tracer: select : 0.016613 ms
+
+gather
+domain tracer: select : 0.016613 ms
+
+filter
+domain tracer: trace : 94.9248 ms
+
+adapter
+domain tracer: trace : 94.9248 ms
+
+select
+domain tracer: trace : 94.9248 ms
+
+trace
+domain tracer: trace : 94.9248 ms
+
+shuffle
+domain tracer: trace : 94.9248 ms
+
+send
+domain tracer: trace : 94.9248 ms
+
+gather
+domain tracer: trace : 94.9248 ms
+
+filter
+domain tracer: shuffle : 11.8947 ms
+
+adapter
+domain tracer: shuffle : 11.8947 ms
+
+select
+domain tracer: shuffle : 11.8947 ms
+
+trace
+domain tracer: shuffle : 11.8947 ms
+
+shuffle
+domain tracer: shuffle : 11.8947 ms
+
+send
+domain tracer: shuffle : 11.8947 ms
+
+gather
+domain tracer: shuffle : 11.8947 ms
+
+filter
+domain tracer: send : 0.023969 ms
+
+adapter
+domain tracer: send : 0.023969 ms
+
+select
+domain tracer: send : 0.023969 ms
+
+trace
+domain tracer: send : 0.023969 ms
+
+shuffle
+domain tracer: send : 0.023969 ms
+
+send
+domain tracer: send : 0.023969 ms
+
+gather
+domain tracer: send : 0.023969 ms
+
+filter
+domain tracer: gather : 3.36991 ms
+
+adapter
+domain tracer: gather : 3.36991 ms
+
+select
+domain tracer: gather : 3.36991 ms
+
+trace
+domain tracer: gather : 3.36991 ms
+
+shuffle
+domain tracer: gather : 3.36991 ms
+
+send
+domain tracer: gather : 3.36991 ms
+
+gather
+domain tracer: gather : 3.36991 ms
+
+filter
+domain tracer: frame : 133.912 ms
+
+adapter
+domain tracer: frame : 133.912 ms
+
+select
+domain tracer: frame : 133.912 ms
+
+trace
+domain tracer: frame : 133.912 ms
+
+shuffle
+domain tracer: frame : 133.912 ms
+
+send
+domain tracer: frame : 133.912 ms
+
+gather
+domain tracer: frame : 133.912 ms
+
+filter
+domain tracer: filter : 16.2896 ms
+
+adapter
+domain tracer: filter : 16.2896 ms
+
+select
+domain tracer: filter : 16.2896 ms
+
+trace
+domain tracer: filter : 16.2896 ms
+
+shuffle
+domain tracer: filter : 16.2896 ms
+
+send
+domain tracer: filter : 16.2896 ms
+
+gather
+domain tracer: filter : 16.2896 ms
+
+filter
+domain tracer: adapter : 0.010045 ms
+
+adapter
+domain tracer: adapter : 0.010045 ms
+
+select
+domain tracer: adapter : 0.010045 ms
+
+trace
+domain tracer: adapter : 0.010045 ms
+
+shuffle
+domain tracer: adapter : 0.010045 ms
+
+send
+domain tracer: adapter : 0.010045 ms
+
+gather
+domain tracer: adapter : 0.010045 ms
+
+filter
+domain tracer: select : 0.014536 ms
+
+adapter
+domain tracer: select : 0.014536 ms
+
+select
+domain tracer: select : 0.014536 ms
+
+trace
+domain tracer: select : 0.014536 ms
+
+shuffle
+domain tracer: select : 0.014536 ms
+
+send
+domain tracer: select : 0.014536 ms
+
+gather
+domain tracer: select : 0.014536 ms
+
+filter
+domain tracer: trace : 94.3831 ms
+
+adapter
+domain tracer: trace : 94.3831 ms
+
+select
+domain tracer: trace : 94.3831 ms
+
+trace
+domain tracer: trace : 94.3831 ms
+
+shuffle
+domain tracer: trace : 94.3831 ms
+
+send
+domain tracer: trace : 94.3831 ms
+
+gather
+domain tracer: trace : 94.3831 ms
+
+filter
+domain tracer: shuffle : 11.4225 ms
+
+adapter
+domain tracer: shuffle : 11.4225 ms
+
+select
+domain tracer: shuffle : 11.4225 ms
+
+trace
+domain tracer: shuffle : 11.4225 ms
+
+shuffle
+domain tracer: shuffle : 11.4225 ms
+
+send
+domain tracer: shuffle : 11.4225 ms
+
+gather
+domain tracer: shuffle : 11.4225 ms
+
+filter
+domain tracer: send : 0.024223 ms
+
+adapter
+domain tracer: send : 0.024223 ms
+
+select
+domain tracer: send : 0.024223 ms
+
+trace
+domain tracer: send : 0.024223 ms
+
+shuffle
+domain tracer: send : 0.024223 ms
+
+send
+domain tracer: send : 0.024223 ms
+
+gather
+domain tracer: send : 0.024223 ms
+
+filter
+domain tracer: gather : 3.33858 ms
+
+adapter
+domain tracer: gather : 3.33858 ms
+
+select
+domain tracer: gather : 3.33858 ms
+
+trace
+domain tracer: gather : 3.33858 ms
+
+shuffle
+domain tracer: gather : 3.33858 ms
+
+send
+domain tracer: gather : 3.33858 ms
+
+gather
+domain tracer: gather : 3.33858 ms
+
+filter
+domain tracer: frame : 131.646 ms
+
+adapter
+domain tracer: frame : 131.646 ms
+
+select
+domain tracer: frame : 131.646 ms
+
+trace
+domain tracer: frame : 131.646 ms
+
+shuffle
+domain tracer: frame : 131.646 ms
+
+send
+domain tracer: frame : 131.646 ms
+
+gather
+domain tracer: frame : 131.646 ms
+
+[ 15.0924   10.2988   10.1611   10.0345   10.1664   10.3621   10.2303
+  10.3671   10.2563   10.4086    9.89679]
+[]
+The run for file ../tests/t_4.out used 4 threads

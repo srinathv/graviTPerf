@@ -22,8 +22,8 @@ class parsedData:
         self.numTrials = -1
         self.tracerDict = None
         self.tracerDictSet = False
-        self.genCameraRays = None
-        self.genCameraRaysSet = False
+        self.genCameraRaysTime = None
+        self.genCameraRaysTimeSet = False
 
     def setNumThreads(self,numThreads):
         self.numThreads = numThreads
@@ -31,13 +31,19 @@ class parsedData:
     def setAdapter(self,adapter):
         self.adapter = adapter
 
+    def setScheduler(self,scheduler):
+        self.scheduler = scheduler
+
+    def setNumTrials(self,numTrials):
+        self.numTrials = numTrials
+
     def setTracerDict(self,tracerDict):
         self.tracerDict = tracerDict
         self.tracerDictSet = True
 
-    def setGenCameraRay(self,genCameraRays):
-        self.genCameraRays = genCameraRays
-        self.genCameraRaysSet = True
+    def setGenCameraRayTime(self,genCameraRays):
+        self.genCameraRaysTime = genCameraRays
+        self.genCameraRaysTimeSet = True
 
     def getNumThreads(self,):
         return self.numThreads
@@ -48,8 +54,14 @@ class parsedData:
     def getScheduler(self,):
         return self.scheduler
 
-    def numTrials(self,):
+    def getNumTrials(self,):
         return self.numTrials
+
+    def getTracerDict(self,):
+            return self.tracerDict
+
+    def getGenCameraRayTime(self,):
+        return self.genCameraRayTime
 
 class gravitTimeParser:
   def __init__(self):
@@ -105,8 +117,7 @@ class gravitTimeParser:
         if ("generate camera") in line:
             time = float(line.split()[3])
             genCamRay=np.append(genCamRay,[time])
-            self.data.setGenCameraRay(genCamRay)
-            self.data.genCameraRaysSet=True
+            self.data.setGenCameraRayTime(genCamRay)
         if ("tracer") in line:
             if ("filter") in line:
               filterTime=np.append(filterTime,line.split()[4])
@@ -123,20 +134,22 @@ class gravitTimeParser:
             if ("gather") in line:
               gatherTime=np.append(gatherTime,line.split()[4])
     self.fid.close()
-    self.data.parsedData={'filter':filterTime,
+    self.data.setNumTrials(np.size(gatherTime))
+    self.data.setTracerDict({'filter':filterTime,
                           'adapter':adapterTime,
                           'select':selectTime,
                           'trace':traceTime,
                           'shuffle':shuffleTime,
                           'send':sendTime,
-                          'gather':gatherTime}
+                          'gather':gatherTime})
 
-    print self.data.parsedData
+
 
 if __name__=="__main__":
     myParser = gravitTimeParser()
     myParser.parseFile("../tests/t_4.out")
     myParser.printRunInfo()
+    print myParser.data.getTracerDict()
 
 
 
