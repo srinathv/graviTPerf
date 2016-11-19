@@ -50,57 +50,75 @@ print "Maverick total time array [ms] for 1 thread is ", hasList[0][1].getTotalT
 
 #now make tot time averages for each threadcount
 knlTimePerThread=np.array([])
+knlMinTimePerThread=np.array([])
 knlStdPerThread=np.array([])
 for i in range(0,len(knlThreadCount)):
      tmpTotTime=np.average(knlList[i][1].getTotalTimeArray()[1:])
+     tmpMinTotTime=np.amin(knlList[i][1].getTotalTimeArray()[1:])
      tmpTotStd=np.std(knlList[i][1].getTotalTimeArray()[1:])
      knlTimePerThread=np.append(knlTimePerThread,tmpTotTime)
+     knlMinTimePerThread=np.append(knlMinTimePerThread,tmpMinTotTime)
      knlStdPerThread=np.append(knlStdPerThread,tmpTotStd)
 
 hasTimePerThread=np.array([])
+hasMinTimePerThread=np.array([])
 hasStdPerThread=np.array([])
 for i in range(0,len(x86ThreadCount)):
      tmpTotTime=np.average(hasList[i][1].getTotalTimeArray()[1:])
+     tmpMinTotTime=np.amin(hasList[i][1].getTotalTimeArray()[1:])
      tmpTotStd=np.std(hasList[i][1].getTotalTimeArray()[1:])
      hasTimePerThread=np.append(hasTimePerThread,tmpTotTime)
+     hasMinTimePerThread=np.append(hasMinTimePerThread,tmpMinTotTime)
      hasStdPerThread=np.append(hasStdPerThread,tmpTotTime)
 
 gpuTimePerThread=np.array([])
+gpuMinTimePerThread=np.array([])
 gpuStdPerThread=np.array([])
 for i in range(0,len(x86ThreadCount)):
      tmpTotTime=np.average(gpuList[i][1].getTotalTimeArray()[1:])
+     tmpMinTotTime=np.amin(gpuList[i][1].getTotalTimeArray()[1:])
      tmpTotStd=np.std(gpuList[i][1].getTotalTimeArray()[1:])
      gpuTimePerThread=np.append(gpuTimePerThread,tmpTotTime)
+     gpuMinTimePerThread=np.append(gpuMinTimePerThread,tmpMinTotTime)
      gpuStdPerThread=np.append(gpuStdPerThread,tmpTotTime)
 
-#py.plot([x / x86ThreadCount[-1] for x in x86ThreadCount],gpuTimePerThread, '-bo')
-ax1=py.subplot(121)
-#ax1.set_yscale("log", nonposy='clip')
-py.errorbar(x86ThreadCount,gpuTimePerThread,yerr=gpuStdPerThread,fmt='-bo',label='gpu')
-py.errorbar(x86ThreadCount,hasTimePerThread,yerr=hasStdPerThread,fmt='-go',label='mav-haswell')
-#py.plot(knlThreadCount,knlTimePerThread,'-ro',label='knl')
-py.errorbar(knlThreadCount,knlTimePerThread,yerr=knlStdPerThread,fmt='-ro',label='knl')
-py.xlabel('Thread count')
-py.ylabel('Avg. Tracer Total time [ms]')
-py.legend()
-
-
-ax2=py.subplot(122)
-ax2.set_yscale("log", nonposy='clip')
-#ax.set_yscale("log", nonposy='clip')
-py.errorbar(x86ThreadCount,gpuTimePerThread,yerr=gpuStdPerThread,fmt='-bo',label='gpu')
-py.errorbar(x86ThreadCount,hasTimePerThread,yerr=hasStdPerThread,fmt='-go',label='mav-haswell')
-#py.plot(knlThreadCount,knlTimePerThread,'-ro',label='knl')
-py.errorbar(knlThreadCount,knlTimePerThread,yerr=knlStdPerThread,fmt='-ro',label='knl')
-py.xlabel('Thread count')
-py.ylabel('Avg. Tracer Total time [ms]')
-py.legend()
 print "knlStd = ",knlStdPerThread
 print "hasStd = ",hasStdPerThread
 print "gpuStd = ",gpuStdPerThread
 
+fig1=py.figure(1)
+ax1=py.subplot(211)
+ax1.set_yscale("log", nonposy='clip')
+py.errorbar(x86ThreadCount,gpuTimePerThread,yerr=gpuStdPerThread,fmt='-bo',label='gpu')
+py.errorbar(x86ThreadCount,hasTimePerThread,yerr=hasStdPerThread,fmt='-go',label='mav-haswell')
+py.errorbar(knlThreadCount,knlTimePerThread,yerr=knlStdPerThread,fmt='-ro',label='knl')
+py.xlabel('Thread count')
+py.ylabel('[Log] Avg. Tracer Total time [ms]')
+py.legend()
 
-#py.errorbar(knlThreadCount,knlTimePerThread,yerr=knlStdPerThread,fmt='o')
 
+# ax2=py.subplot(312)
+# ax2.set_yscale("log", nonposy='clip')
+# py.errorbar(x86ThreadCount,gpuTimePerThread,yerr=gpuStdPerThread,fmt='-bo',label='gpu')
+# py.errorbar(x86ThreadCount,hasTimePerThread,yerr=hasStdPerThread,fmt='-go',label='mav-haswell')
+# #py.plot(knlThreadCount,knlTimePerThread,'-ro',label='knl')
+# py.errorbar(knlThreadCount,knlTimePerThread,yerr=knlStdPerThread,fmt='-ro',label='knl')
+# py.xlabel('Thread count')
+# py.ylabel('[Log] Avg. Tracer Total time [ms]')
+# py.legend()
+
+#py.figure(2)
+ax3=py.subplot(212)
+
+ax3.set_yscale("log", nonposy='clip')
+ax3.set_xscale("linear", nonposy='clip')
+py.plot([x / float(knlThreadCount[-1]) for x in knlThreadCount],knlMinTimePerThread,'-ro',label='knl')
+py.plot([x / float(x86ThreadCount[-1]) for x in x86ThreadCount],gpuMinTimePerThread,'-bo',label='gpu')
+py.plot([x / float(x86ThreadCount[-1]) for x in x86ThreadCount],hasMinTimePerThread,'-go',label='mav-haswell')
+py.xlabel('Node saturation')
+py.ylabel('[Log] Min. Tracer Total time [ms]')
+py.legend()
+
+fig1.suptitle('gvtPly, 10 iterations, single mpi rank')
 
 py.show()
