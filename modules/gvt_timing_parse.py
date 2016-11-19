@@ -24,6 +24,7 @@ class parsedData:
         self.tracerDictSet = False
         self.genCameraRaysTime = None
         self.genCameraRaysTimeSet = False
+        self.frameTime = None
 
     def setNumThreads(self,numThreads):
         self.numThreads = numThreads
@@ -45,6 +46,9 @@ class parsedData:
         self.genCameraRaysTime = genCameraRays
         self.genCameraRaysTimeSet = True
 
+    def setFrameTime(self,frameTime):
+        self.frameTime = frameTime
+
     def getNumThreads(self,):
         return self.numThreads
 
@@ -62,6 +66,9 @@ class parsedData:
 
     def getGenCameraRayTime(self,):
         return self.genCameraRayTime
+
+    def getFrameTime(self,):
+        return self.frameTime
 
 class gravitTimeParser:
   def __init__(self):
@@ -93,6 +100,7 @@ class gravitTimeParser:
 
     #initialize time arrays
     genCamRay = np.array([])
+    frameTime = np.array([])
     filterTime = np.array([])
     adapterTime = np.array([])
     selectTime = np.array([])
@@ -133,6 +141,10 @@ class gravitTimeParser:
               sendTime=np.append(sendTime,float(line.split()[4]))
             if ("gather") in line:
               gatherTime=np.append(gatherTime,float(line.split()[4]))
+            if ("frame :") in line:
+              time = float(line.split()[4])
+              frameTime = np.append(frameTime,[time])
+              self.data.setFrameTime(frameTime)
     self.fid.close()
     self.data.setNumTrials(np.size(gatherTime))
     self.data.setTracerDict({'filter':filterTime,

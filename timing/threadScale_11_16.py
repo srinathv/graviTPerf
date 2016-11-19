@@ -50,25 +50,57 @@ print "Maverick total time array [ms] for 1 thread is ", hasList[0][1].getTotalT
 
 #now make tot time averages for each threadcount
 knlTimePerThread=np.array([])
+knlStdPerThread=np.array([])
 for i in range(0,len(knlThreadCount)):
      tmpTotTime=np.average(knlList[i][1].getTotalTimeArray()[1:])
+     tmpTotStd=np.std(knlList[i][1].getTotalTimeArray()[1:])
      knlTimePerThread=np.append(knlTimePerThread,tmpTotTime)
+     knlStdPerThread=np.append(knlStdPerThread,tmpTotStd)
 
 hasTimePerThread=np.array([])
+hasStdPerThread=np.array([])
 for i in range(0,len(x86ThreadCount)):
      tmpTotTime=np.average(hasList[i][1].getTotalTimeArray()[1:])
+     tmpTotStd=np.std(hasList[i][1].getTotalTimeArray()[1:])
      hasTimePerThread=np.append(hasTimePerThread,tmpTotTime)
+     hasStdPerThread=np.append(hasStdPerThread,tmpTotTime)
 
 gpuTimePerThread=np.array([])
+gpuStdPerThread=np.array([])
 for i in range(0,len(x86ThreadCount)):
      tmpTotTime=np.average(gpuList[i][1].getTotalTimeArray()[1:])
+     tmpTotStd=np.std(gpuList[i][1].getTotalTimeArray()[1:])
      gpuTimePerThread=np.append(gpuTimePerThread,tmpTotTime)
+     gpuStdPerThread=np.append(gpuStdPerThread,tmpTotTime)
 
 #py.plot([x / x86ThreadCount[-1] for x in x86ThreadCount],gpuTimePerThread, '-bo')
-py.plot(x86ThreadCount,gpuTimePerThread, '-bo',label='gpu')
-py.plot(x86ThreadCount,hasTimePerThread,'-go',label='mav-haswell')
-py.plot(knlThreadCount,knlTimePerThread,'-ro',label='knl')
+ax1=py.subplot(121)
+#ax1.set_yscale("log", nonposy='clip')
+py.errorbar(x86ThreadCount,gpuTimePerThread,yerr=gpuStdPerThread,fmt='-bo',label='gpu')
+py.errorbar(x86ThreadCount,hasTimePerThread,yerr=hasStdPerThread,fmt='-go',label='mav-haswell')
+#py.plot(knlThreadCount,knlTimePerThread,'-ro',label='knl')
+py.errorbar(knlThreadCount,knlTimePerThread,yerr=knlStdPerThread,fmt='-ro',label='knl')
 py.xlabel('Thread count')
 py.ylabel('Avg. Tracer Total time [ms]')
 py.legend()
+
+
+ax2=py.subplot(122)
+ax2.set_yscale("log", nonposy='clip')
+#ax.set_yscale("log", nonposy='clip')
+py.errorbar(x86ThreadCount,gpuTimePerThread,yerr=gpuStdPerThread,fmt='-bo',label='gpu')
+py.errorbar(x86ThreadCount,hasTimePerThread,yerr=hasStdPerThread,fmt='-go',label='mav-haswell')
+#py.plot(knlThreadCount,knlTimePerThread,'-ro',label='knl')
+py.errorbar(knlThreadCount,knlTimePerThread,yerr=knlStdPerThread,fmt='-ro',label='knl')
+py.xlabel('Thread count')
+py.ylabel('Avg. Tracer Total time [ms]')
+py.legend()
+print "knlStd = ",knlStdPerThread
+print "hasStd = ",hasStdPerThread
+print "gpuStd = ",gpuStdPerThread
+
+
+#py.errorbar(knlThreadCount,knlTimePerThread,yerr=knlStdPerThread,fmt='o')
+
+
 py.show()
