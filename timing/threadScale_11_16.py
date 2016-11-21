@@ -10,17 +10,6 @@ try:
 except:
     print "could not files gvt_timing_parse module"
 
-
-
-
-myParser = gvtp.gravitTimeParser()
-myParser.parseFile("../tests/t_4.out")
-myParser.printRunInfo()
-t4Filter=myParser.data.getTracerDict()['filter']
-print np.average(t4Filter[1:])
-print myParser.data.getNumTrials()
-
-
 knlThreadCount=[1,2,4,8,10,17,34,67,68]
 knlList=[]
 for i in knlThreadCount:
@@ -28,9 +17,7 @@ for i in knlThreadCount:
   knlParser.parseFile("../data/knl-dev/t_" + str(i) + ".out")
   knlList.append([i,knlParser])
   del knlParser
-
 print "knl 1 thread filter times = ", knlList[0][1].data.getTracerDict()['filter']
-
 
 x86ThreadCount = [1,2,4,5,10,15,19,20]
 
@@ -120,5 +107,17 @@ py.ylabel('[Log] Min. Tracer Total time [ms]')
 py.legend()
 
 fig1.suptitle('gvtPly, 10 iterations, single mpi rank')
+
+fig2=py.figure(2)
+ax4=py.subplot(111)
+ax4.set_yscale("linear", nonposy='clip')
+ax4.set_xscale("linear", nonposy='clip')
+py.plot([x / float(knlThreadCount[-1]) for x in knlThreadCount],[knlMinTimePerThread[0]/y for y in knlMinTimePerThread] ,'-ro',label='knl (64 max threads)')
+py.plot([x / float(x86ThreadCount[-1]) for x in x86ThreadCount],[gpuMinTimePerThread[0] / y for y  in gpuMinTimePerThread] ,'-bo',label='gpu (20 max threads) ')
+py.plot([x / float(x86ThreadCount[-1]) for x in x86ThreadCount],[hasMinTimePerThread[0] / y for y in hasMinTimePerThread] , '-go' , label = 'mav-haswell (20 max threads)')
+py.xlabel('fraction of node saturation ')
+py.ylabel('Speed Up w.t.t single thread (min. time)')
+py.legend(loc=2)
+fig2.suptitle('Suboptimal thread scaling for Enzo8')
 
 py.show()
